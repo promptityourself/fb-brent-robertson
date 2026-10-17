@@ -1,17 +1,186 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Brent&#x27;s Shopify store, built live</title><meta name="description" content="A proposal for one Prompt It Yourself session: your Shopify store, on your laptop, with you holding the keyboard.">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brent's shop, built live</title>
+<meta name="description" content="A Prompt It Yourself session for Brent in North Lakes: an AI agent builds the Shopify store on his own laptop, live, free, and he keeps everything.">
+<meta property="og:title" content="Brent's shop, built live">
+<meta property="og:description" content="Free. Up to four hours. An AI agent on your own computer. You keep the store.">
+<meta property="og:image" content="https://fb-brent-robertson.promptityourself.com/media/hero-kitchen.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="https://promptityourself.com/media/logo/piy-tile.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/bebas-neue-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-:root{--bg:#f6f4ef;--fg:#1d1d1b;--muted:#5b5a55;--card:#fff;--line:#d9d5cc;--accent:#0a6b4f}
-@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#15161a;--fg:#ebe9e3;--muted:#a4a29a;--card:#1f2127;--line:#33363e;--accent:#3fbf93}}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}
-main{max-width:860px;margin:0 auto;padding:48px 16px 64px}h1{font-size:clamp(1.8rem,5vw,2.6rem);line-height:1.1;margin:0 0 8px}.sub{color:var(--muted);margin:0 0 28px;max-width:60ch}
-ul{list-style:none;padding:0;margin:0;display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-li a{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;color:inherit;text-decoration:none;height:100%}li a:hover{border-color:var(--accent)}
-.n{display:block;font:700 12px/1 system-ui,sans-serif;letter-spacing:.14em;color:var(--accent);margin-bottom:10px}li b{font-size:1.15rem}li p{color:var(--muted);margin:6px 0 0;font-size:.95rem}
-footer{margin-top:36px;color:var(--muted);font-size:.9rem}a{color:var(--accent)}
-</style></head><body><main>
-<h1>Brent&#x27;s Shopify store, built live</h1><p class="sub">A proposal for one Prompt It Yourself session: your Shopify store, on your laptop, with you holding the keyboard. Three versions of the same proposal. Same facts, same plan, three designs.</p>
-<ul><li><a href="v1/"><span class="n">V1</span><b>Run sheet</b><p>Broadcast style. Dark, timecoded, the session as a run sheet with planned chapters.</p></a></li><li><a href="v2/"><span class="n">V2</span><b>Checklist</b><p>Light and plain. Five numbered cards, a time bar, and a checklist Brent can print.</p></a></li><li><a href="v3/"><span class="n">V3</span><b>Storyboard</b><p>Poster style. Big type, the session as a horizontal storyboard, an episode card at the top.</p></a></li></ul>
-<footer>A <a href="https://promptityourself.com/">Prompt It Yourself</a> proposal page. Source: <a href="https://github.com/promptityourself/fb-brent-robertson">github.com/promptityourself/fb-brent-robertson</a>.</footer>
-</main></body></html>
+/* Prompt It Yourself colours and type, from promptityourself.com/media. Dark only, like the site. */
+@font-face{font-family:"Bebas Neue";src:url("fonts/bebas-neue-latin-ext.woff2") format("woff2");font-display:swap;font-weight:400;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Bebas Neue";src:url("fonts/bebas-neue-latin.woff2") format("woff2");font-display:swap;font-weight:400;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+:root{color-scheme:dark;--paper:#0f0f10;--panel:#1d1a1a;--ink:#f4f2f6;--mute:#a8a2b0;--line:#322929;--red:#e2342b;--red-deep:#f0524a;--red-field:#c9251d;
+  --dots:radial-gradient(#ffffff29 1px,transparent 1.5px) 0 0/20px 20px;
+  --font-title:"Bebas Neue","Arial Narrow",Arial,sans-serif;--font-body:"Helvetica Neue",Helvetica,Arial,"Nimbus Sans",sans-serif;--font-code:Menlo,Consolas,"DejaVu Sans Mono",monospace;
+  --page:1100px;--gutter:clamp(16px,4vw,48px)}
+*{box-sizing:border-box}
+html{background:var(--paper)}
+body{margin:0;background:var(--paper) var(--dots);color:var(--ink);font:1.0625rem/1.55 var(--font-body)}
+a{color:var(--red-deep)}
+.wrap{max-width:var(--page);margin:0 auto;padding:0 var(--gutter)}
+h1,h2,h3{font-family:var(--font-title);font-weight:400;letter-spacing:.01em;line-height:.95;margin:0}
+.mark{display:inline-block;background:var(--red);color:#fff;padding:0 .12em;line-height:1}
+.label{font:700 .8125rem/1 var(--font-body);letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.btn{display:inline-block;background:var(--red-field);color:#fff;text-decoration:none;font:700 1rem var(--font-body);padding:14px 22px;border-radius:4px}
+.btn.ghost{background:transparent;border:1px solid var(--line);color:var(--ink)}
+.btn+.btn{margin-left:10px}
+
+/* top bar */
+.top{display:flex;align-items:center;justify-content:space-between;padding:20px 0}
+.top img{width:44px;height:44px;display:block}
+.top a.live{font:700 .8125rem var(--font-body);letter-spacing:.08em;text-transform:uppercase;color:var(--ink);text-decoration:none}
+.top a.live::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--red);margin-right:8px;vertical-align:1px}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(24px,4vw,56px);align-items:center;padding:clamp(24px,5vw,64px) 0}
+.hero h1{font-size:clamp(3.5rem,9vw,7.5rem)}
+.hero .lead{font-size:1.25rem;margin:20px 0 8px;max-width:30ch}
+.hero .sub{color:var(--mute);margin:0 0 24px;max-width:46ch}
+.hero figure{margin:0;position:relative}
+.hero img{width:100%;height:auto;display:block;border:1px solid var(--line)}
+.hero figcaption{position:absolute;left:12px;bottom:12px;font:700 .8125rem var(--font-body);letter-spacing:.08em;text-transform:uppercase;color:#fff;background:#0f0f10cc;padding:6px 10px}
+@media(max-width:800px){.hero{grid-template-columns:1fr}.hero figure{order:-1}}
+
+/* brief line */
+.brief{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.brief div{font-size:.9375rem}.brief b{display:block;font-family:var(--font-title);font-size:1.6rem;line-height:1;color:var(--ink);margin-bottom:4px}
+@media(max-width:800px){.brief{grid-template-columns:repeat(2,1fr)}}
+
+/* sections */
+section{padding:clamp(40px,6vw,80px) 0}
+section h2{font-size:clamp(2.5rem,6vw,4.5rem);margin-bottom:8px}
+section .intro{color:var(--mute);max-width:60ch;margin:0 0 28px}
+
+/* what usually happens: chapter list in the show's own style */
+.chapters{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
+.chapters li{display:grid;grid-template-columns:64px 1fr;gap:12px;padding:16px 0;border-bottom:1px solid var(--line);align-items:start}
+.chapters time{font:700 .9375rem var(--font-code);color:var(--red-deep);padding-top:4px}
+.chapters b{display:block;font-size:1.0625rem}
+.chapters span{color:var(--mute);font-size:.9375rem}
+@media(max-width:800px){.chapters{grid-template-columns:1fr}}
+
+/* the shop */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px);align-items:center}
+.split img{width:100%;height:auto;display:block;border:1px solid var(--line)}
+.split ul{margin:0;padding:0;list-style:none}
+.split li{padding:12px 0;border-bottom:1px solid var(--line)}
+.split li b{font-family:var(--font-title);font-size:1.5rem;line-height:1;display:block;margin-bottom:2px}
+.split li span{color:var(--mute);font-size:.9375rem}
+@media(max-width:800px){.split{grid-template-columns:1fr}}
+
+/* guests */
+.guests{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.guest{background:var(--panel);border:1px solid var(--line);padding:22px}
+.guest q{display:block;font-size:1.0625rem;quotes:"\201C" "\201D";margin-bottom:14px}
+.guest q::before{color:var(--red);font-family:var(--font-title);font-size:1.6rem;line-height:0;margin-right:2px}
+.guest a{font-family:var(--font-title);font-size:1.4rem;color:var(--ink);text-decoration:none;line-height:1}
+.guest small{display:block;color:var(--mute);font-size:.875rem;margin-top:2px}
+@media(max-width:800px){.guests{grid-template-columns:1fr}}
+
+/* closing */
+.close{background:var(--panel);border:1px solid var(--line);padding:clamp(28px,5vw,56px);display:grid;grid-template-columns:1.2fr 1fr;gap:24px;align-items:center}
+.close h2{font-size:clamp(2.8rem,7vw,5.5rem)}
+.close p{color:var(--mute);margin:10px 0 20px}
+.close img{width:100%;height:auto;display:block;border:1px solid var(--line)}
+@media(max-width:800px){.close{grid-template-columns:1fr}}
+
+footer{padding:36px 0 56px;color:var(--mute);font-size:.875rem;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+footer img{height:28px;width:auto;display:block}
+footer a{color:var(--mute)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="top">
+  <a href="https://promptityourself.com/" aria-label="Prompt It Yourself"><img src="https://promptityourself.com/media/logo/piy-tile.svg" alt="P|Y"></a>
+  <a class="live" href="https://promptityourself.com/show/">Apply to be a guest</a>
+</div>
+
+<header class="hero">
+  <div>
+    <div class="label">A session proposed for Brent, North Lakes</div>
+    <h1>Your shop.<br><span class="mark">Built live.</span><br>By you.</h1>
+    <p class="lead">Free. Up to four hours. An AI agent on your own computer.</p>
+    <p class="sub">You asked for someone to build your Shopify store. On the show, the agent builds it, on your laptop, while you tell it what you sell. You keep the store, the accounts and the recording.</p>
+    <a class="btn" href="https://promptityourself.com/show/">Apply to be a guest</a><a class="btn ghost" href="https://promptityourself.com/private/">Or in private</a>
+  </div>
+  <figure><img src="media/hero-kitchen.jpg" width="1376" height="768" alt="A laptop with a terminal open on a kitchen table at night, a box of products beside it"><figcaption>Your table. Your laptop. Live.</figcaption></figure>
+</header>
+
+<div class="brief">
+  <div><b>Shopify</b>The platform you named. Nothing custom.</div>
+  <div><b>Your domain</b>The one you already own.</div>
+  <div><b>North Lakes</b>Delivery area drawn around you.</div>
+  <div><b>No experience</b>You never touch the code. You talk.</div>
+</div>
+
+<section>
+  <h2>What <span class="mark">usually</span> happens</h2>
+  <p class="intro">Every episode runs the same way. These are the chapters from past episodes, with the names changed to yours.</p>
+  <ol class="chapters">
+    <li><time>0:00</time><div><b>You say the wish.</b><span>What you sell, who buys it, how far you drive. That is the whole brief.</span></div></li>
+    <li><time>0:03</time><div><b>A disclaimer before anything is built.</b><span>What the agent can touch, what it cannot, what it costs.</span></div></li>
+    <li><time>0:08</time><div><b>The genie goes in the box.</b><span>The agent is installed on your laptop, under your own account, in two prompts.</span></div></li>
+    <li><time>0:20</time><div><b>Your accounts, your card, off screen.</b><span>Shopify opens in your name. Nothing lives in ours.</span></div></li>
+    <li><time>0:30</time><div><b>The agent does the typing.</b><span>You describe. It builds. Mate helps you say it so the agent gets it.</span></div></li>
+    <li><time>1:10</time><div><b>Five versions at once.</b><span>Looks, layouts, wording. You point at the one you like. Nobody asks a person for that.</span></div></li>
+    <li><time>2:00</time><div><b>An error you do not understand is a thing you paste back.</b><span>The agent reads it and fixes it. You watch.</span></div></li>
+    <li><time>3:00</time><div><b>It goes live. You own it.</b><span>Password off. You change a price yourself, on camera, so you know you can.</span></div></li>
+    <li><time>After</time><div><b>Show notes.</b><span>What you asked for, what was tried, where it stands, each linked to the second it happened.</span></div></li>
+    <li><time>Always</time><div><b>Yours to keep.</b><span>The store, the logins, the recording. Change anything later by asking the agent again.</span></div></li>
+  </ol>
+</section>
+
+<section>
+  <div class="split">
+    <img src="media/shop-from-laptop.jpg" width="1376" height="768" alt="A small storefront drawn in red light rising from a laptop screen over a street map" loading="lazy">
+    <div>
+      <h2>For your <span class="mark">shop</span></h2>
+      <p class="intro">You do not need to know how Shopify works. You need to know what you sell. The agent does the rest, in front of you.</p>
+      <ul>
+        <li><b>Products and checkout</b><span>Photos off your phone, words from your mouth, card payments on.</span></li>
+        <li><b>Delivery area</b><span>A radius or a postcode list around North Lakes, a minimum order, pickup if you want it.</span></li>
+        <li><b>Facebook and Instagram</b><span>Your products inside your posts.</span></li>
+        <li><b>Email on your domain</b><span>Orders come from you, not from a free address.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>People who <span class="mark">came</span> with a real problem</h2>
+  <p class="intro">Nobody on the show has built a Shopify store yet. You would be the first. These three had never built anything either.</p>
+  <div class="guests">
+    <div class="guest"><q>I went in thinking I needed a website built. What I got instead was way better. He doesn't just do it for you, he shows you how to do it yourself.</q><a href="https://promptityourself.com/guests/bernadett-doka/">Bernadett Doka</a><small>Psychologist. Her own site, email on her domain, then her own CRM.</small></div>
+    <div class="guest"><q>He helped me solving problems in a few hours that I'd have spent months working on myself.</q><a href="https://promptityourself.com/guests/istvan-david/">Istvan David</a><small>Projection artist. Came for sales, left with three thousand leads.</small></div>
+    <div class="guest"><q>Now, a task that took me hours to complete takes only a few seconds.</q><a href="https://promptityourself.com/guests/suzanne-fay/">Suzanne Fay</a><small>Migration agent, Brisbane. A private session, not streamed.</small></div>
+  </div>
+</section>
+
+<section>
+  <div class="close">
+    <div>
+      <div class="label">Brisbane north side, your place or ours</div>
+      <h2>Bring the <span class="mark">laptop.</span><br>Bring the product.</h2>
+      <p>That is the whole list. The agent and Mate bring the rest.</p>
+      <a class="btn" href="https://promptityourself.com/show/">Apply to be a guest</a><a class="btn ghost" href="https://promptityourself.com/episodes/">Watch an episode first</a>
+    </div>
+    <img src="media/two-hands.jpg" width="1376" height="768" alt="The owner's hands on a laptop keyboard, a mentor pointing at the screen" loading="lazy">
+  </div>
+</section>
+
+<footer>
+  <a href="https://promptityourself.com/"><img src="https://promptityourself.com/media/logo/piy-lockup-white.svg" alt="Prompt It Yourself"></a>
+  <span>Images made with the agent through Replicate. Logo and colours from <a href="https://promptityourself.com/media/">promptityourself.com/media</a>. Source on <a href="https://github.com/promptityourself/fb-brent-robertson">GitHub</a>.</span>
+</footer>
+
+</div>
+</body>
+</html>
