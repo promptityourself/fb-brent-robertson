@@ -1,0 +1,9 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "fb-brent-robertson",
+  "compatibility_date": "2026-10-17",
+  // Static site: no Worker code, just the rendered pages in site/.
+  "assets": { "directory": "./site", "not_found_handling": "404-page" },
+  "routes": [{ "pattern": "fb-brent-robertson.promptityourself.com", "custom_domain": true }],
+  "workers_dev": false
+}
