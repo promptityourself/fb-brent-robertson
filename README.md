@@ -8,10 +8,11 @@ Live: https://fb-brent-robertson.promptityourself.com/
 ## What is in it
 
 - `site/index.html` — the page. Plain HTML and CSS, no build step.
-- `site/media/` — three images made with the agent through Replicate (`google/nano-banana-2`,
-  16:9, prompted for the show's look: near-black, one red, no text). The prompts are in `media/PROMPTS.md`.
+- `site/media/` — screenshots of three live sites our guests own (deoblock.com, vipaccounting.com.au,
+  dokabernadett.com), taken with headless Chromium on 17 October 2026. Nothing on the page is
+  AI-generated imagery.
 - `site/fonts/` — Bebas Neue, the show's title face, self-hosted as the site does.
-- Logo, lockup and colours are the show's own, used from
+- Logo, lockup, colours and the episode cards are the show's own, loaded from
   [promptityourself.com/media](https://promptityourself.com/media/).
 
 ## Deploy
@@ -24,6 +25,6 @@ CLOUDFLARE_ACCOUNT_ID=ef7d622089ca4480c9f6fbf368f66787 npx wrangler deploy   # t
 
 ## What is and is not claimed
 
-The chapters under "What usually happens" are patterns from past episodes, not a plan. Nobody on the
-show has built a Shopify store yet; the page says so. Guest quotes are verbatim from their pages on
-promptityourself.com.
+Every episode moment on the page comes from that episode's page on promptityourself.com, and links to
+it. Nobody on the show has built a Shopify store yet; the page says so. deoblock.com is the one Shopify
+store among the three sites, and the page says which.
