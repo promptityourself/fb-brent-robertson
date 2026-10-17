@@ -4,10 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Brent's shop, built live</title>
-<meta name="description" content="A Prompt It Yourself session for Brent in North Lakes: an AI agent builds the Shopify store on his own laptop, live, free, and he keeps everything. Three sites our guests own, and what happened on past episodes.">
+<meta name="description" content="A Prompt It Yourself session for Brent in North Lakes: an AI agent builds the Shopify store on his own laptop while Mate helps him prompt it. Free, live, and everything stays his, so he runs it himself afterwards.">
 <meta property="og:title" content="Brent's shop, built live">
-<meta property="og:description" content="Free. Up to four hours. An AI agent on your own computer. You keep the store.">
-<meta property="og:image" content="https://promptityourself.com/media/og/og-door-show.png">
+<meta property="og:description" content="Free. Up to four hours. An AI agent on your own laptop, in your own accounts. Mate helps you prompt it. You keep and run the store yourself.">
+<meta property="og:image" content="https://fb-brent-robertson.promptityourself.com/media/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta property="og:type" content="website">
 <link rel="icon" href="https://promptityourself.com/media/logo/piy-tile.svg" type="image/svg+xml">
 <link rel="preload" href="fonts/bebas-neue-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -87,6 +90,10 @@ section .intro{color:var(--mute);max-width:62ch;margin:0 0 28px}
 .design a.open{font:700 .9375rem var(--font-body);color:var(--ink);text-decoration:none;border:1px solid var(--line);padding:10px 14px;border-radius:4px;align-self:flex-start;margin:auto 20px 20px}
 @media(max-width:800px){.designs{grid-template-columns:1fr}}
 
+.yours .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.yours .cols div{background:var(--panel);border:1px solid var(--line);padding:20px}
+.yours .cols h3{font-size:1.6rem;margin-bottom:6px}.yours .cols p{margin:0;font-size:.9375rem;color:var(--mute)}
+@media(max-width:800px){.yours .cols{grid-template-columns:1fr}}
 .close{background:var(--panel);border:1px solid var(--line);padding:clamp(28px,5vw,56px);display:grid;grid-template-columns:1.2fr 1fr;gap:24px;align-items:center}
 .close h2{font-size:clamp(2.8rem,7vw,5.5rem)}
 .close p{color:var(--mute);margin:10px 0 20px}
@@ -111,18 +118,28 @@ footer a{color:var(--mute)}
     <div class="label">A session proposed for Brent, North Lakes</div>
     <h1>Your shop.<br><span class="mark">Built live.</span><br>By you.</h1>
     <p class="lead">Free. Up to four hours. An AI agent on your own computer.</p>
-    <p class="sub">You asked for someone to build your Shopify store. On the show, the agent builds it, on your laptop, while you tell it what you sell. You keep the store, the accounts and the recording.</p>
+    <p class="sub">You asked for someone to build your Shopify store. Here is the difference: nobody builds it for you. An AI agent on your own laptop builds it, and Mate sits next to you and helps you tell it what to do. When the session ends, the store, the accounts and the skill to change it are yours. Not ours.</p>
     <a class="btn" href="https://promptityourself.com/show/">Apply to be a guest</a><a class="btn ghost" href="https://promptityourself.com/private/">Or in private</a>
   </div>
   <a href="https://promptityourself.com/guests/"><img src="https://promptityourself.com/media/og/og-door-show.png" width="1200" height="630" alt="Three past guests of the show"></a>
 </header>
 
 <div class="brief">
-  <div><b>Shopify</b>The platform you named. Nothing custom.</div>
-  <div><b>Your domain</b>The one you already own.</div>
-  <div><b>North Lakes</b>Delivery area drawn around you.</div>
-  <div><b>No experience</b>You never touch the code. You talk.</div>
+  <div><b>Your Shopify</b>Opened in your name, on your card. We never hold a login.</div>
+  <div><b>Your domain</b>Stays where you bought it. Connected, not transferred to us.</div>
+  <div><b>Your agent</b>Installed on your laptop under your own account. It leaves with you.</div>
+  <div><b>Your hands</b>Mate helps you prompt. You type the asks. You keep the skill.</div>
 </div>
+
+<section class="yours">
+  <h2>Whose is it? <span class="mark">Yours.</span></h2>
+  <p class="intro">This is not a web-design service with a nicer camera. The point of the show is that you leave able to run the store without us.</p>
+  <div class="cols">
+    <div><h3>What Mate does</h3><p>Sits next to you. Helps you say what you want so the agent gets it. Explains what it just did. Stops you before a bad click. That is the whole job.</p></div>
+    <div><h3>What the agent does</h3><p>The typing. Products, checkout, delivery zones, the Facebook channel, the email setup. On your laptop, in your accounts, while you watch.</p></div>
+    <div><h3>What you do after</h3><p>Change a price. Add a product. Widen the delivery area. You ask the agent on your own laptop, the way you did on the show. No ticket, no invoice, no waiting for anyone.</p></div>
+  </div>
+</section>
 
 <section>
   <h2>Three sites our <span class="mark">guests</span> own</h2>
@@ -143,7 +160,7 @@ footer a{color:var(--mute)}
         <h3>VIP Accounting</h3>
         <a class="url" href="https://vipaccountingau.com/">vipaccountingau.com</a>
         <p>Adrienn Volcz, accountant in Sydney. On 31 August her site was rebuilt from scratch and live on a domain bought on air by the end of the night, with a booking page that cost nothing. She came back a month later with tools she had built alone.</p>
-        <p class="you"><b>Your version.</b> Your domain connected and your store live before the session ends.</p>
+        <p class="you"><b>Your version.</b> Your domain connected and your store live before the session ends, in your accounts.</p>
       </div>
     </article>
     <article class="site">
@@ -228,7 +245,7 @@ footer a{color:var(--mute)}
     <div>
       <div class="label">Brisbane north side, your place or ours</div>
       <h2>Bring the <span class="mark">laptop.</span><br>Bring the product.</h2>
-      <p>That is the whole list. The agent and Mate bring the rest. Nobody on the show has built a Shopify store yet. You would be the first.</p>
+      <p>That is the whole list. The agent does the building, Mate helps you prompt it, and you take all of it home. Nobody on the show has built a Shopify store yet. You would be the first.</p>
       <a class="btn" href="https://promptityourself.com/show/">Apply to be a guest</a><a class="btn ghost" href="https://promptityourself.com/private/">Or in private</a>
     </div>
     <a href="https://promptityourself.com/private/"><img src="https://promptityourself.com/media/og/og-door-private.png" width="1200" height="630" alt="Off show. Get some help privately." loading="lazy"></a>

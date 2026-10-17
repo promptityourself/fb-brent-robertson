@@ -13,6 +13,8 @@ Live: https://fb-brent-robertson.promptityourself.com/
 - `site/media/` — screenshots of three live sites our guests own (deoblock.com, vipaccountingau.com,
   dokabernadett.com) and of the three directions, taken with headless Chromium on 17 October 2026.
   Nothing on the page is AI-generated imagery.
+- `og/card.html` — the source of the OG image. Rendered by headless Chromium at 1200×630 into
+  `site/media/og.png`; the show's fonts, logo and colours, drawn by code.
 - `site/fonts/` — Bebas Neue, the show's title face, self-hosted as the site does.
 - Logo, lockup, colours and the episode cards are the show's own, loaded from
   [promptityourself.com/media](https://promptityourself.com/media/).
