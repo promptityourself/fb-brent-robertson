@@ -77,6 +77,16 @@ section .intro{color:var(--mute);max-width:62ch;margin:0 0 28px}
 .ep .you b{color:var(--ink)}
 @media(max-width:800px){.eps{grid-template-columns:1fr}}
 
+/* three directions for the store */
+.designs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.design{background:var(--panel);border:1px solid var(--line);display:flex;flex-direction:column}
+.design img{width:100%;height:auto;display:block;aspect-ratio:16/10;object-fit:cover;object-position:top;border-bottom:1px solid var(--line)}
+.design .body{padding:18px 20px 20px}
+.design h3{font-size:1.7rem}.design h3 small{font-family:var(--font-body);font-size:.8125rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);display:block;margin-bottom:4px}
+.design p{margin:8px 0 12px;font-size:.9375rem;color:var(--mute)}
+.design a.open{font:700 .9375rem var(--font-body);color:var(--ink);text-decoration:none;border:1px solid var(--line);padding:10px 14px;border-radius:4px;align-self:flex-start;margin:auto 20px 20px}
+@media(max-width:800px){.designs{grid-template-columns:1fr}}
+
 .close{background:var(--panel);border:1px solid var(--line);padding:clamp(28px,5vw,56px);display:grid;grid-template-columns:1.2fr 1fr;gap:24px;align-items:center}
 .close h2{font-size:clamp(2.8rem,7vw,5.5rem)}
 .close p{color:var(--mute);margin:10px 0 20px}
@@ -128,11 +138,11 @@ footer a{color:var(--mute)}
       </div>
     </article>
     <article class="site">
-      <a href="https://vipaccounting.com.au/"><img src="media/site-vipaccounting.jpg" width="1280" height="800" alt="vipaccounting.com.au home page" loading="lazy"></a>
+      <a href="https://vipaccountingau.com/"><img src="media/site-vipaccountingau.jpg" width="1280" height="800" alt="vipaccountingau.com home page" loading="lazy"></a>
       <div class="body">
         <h3>VIP Accounting</h3>
-        <a class="url" href="https://vipaccounting.com.au/">vipaccounting.com.au</a>
-        <p>Adrienn Volcz, accountant in Sydney. On 31 August the site was rebuilt and live on her own domain by the end of the night, the domain moved on air, and a booking page added that cost nothing.</p>
+        <a class="url" href="https://vipaccountingau.com/">vipaccountingau.com</a>
+        <p>Adrienn Volcz, accountant in Sydney. On 31 August her site was rebuilt from scratch and live on a domain bought on air by the end of the night, with a booking page that cost nothing. She came back a month later with tools she had built alone.</p>
         <p class="you"><b>Your version.</b> Your domain connected and your store live before the session ends.</p>
       </div>
     </article>
@@ -144,6 +154,28 @@ footer a{color:var(--mute)}
         <p>Bernadett Doka, psychologist in Budapest. Had never opened a terminal. Two sessions later: a bilingual site she owns and changes herself, with email on her own domain.</p>
         <p class="you"><b>Your version.</b> You change a price or a delivery zone yourself. Nobody to wait for.</p>
       </div>
+    </article>
+  </div>
+</section>
+
+<section>
+  <h2>Three <span class="mark">directions</span> for your store</h2>
+  <p class="intro">We do not know what you sell yet, so these are not about your product. They are three ways a Shopify store can feel, built the way the agent builds on the show: several at once, you point at one. Your photos and your words replace every block.</p>
+  <div class="designs">
+    <article class="design">
+      <a href="designs/market/"><img src="media/design-market.jpg" width="1280" height="800" alt="Design A, Market: warm cream page with green accents and a product grid" loading="lazy"></a>
+      <div class="body"><h3><small>Design A</small>Market</h3><p>Warm, cream and green, serif headings. For food, produce, plants, anything made by hand and eaten or grown. Delivery strip under the hero.</p></div>
+      <a class="open" href="designs/market/">Open design A</a>
+    </article>
+    <article class="design">
+      <a href="designs/studio/"><img src="media/design-studio.jpg" width="1280" height="800" alt="Design B, Studio: white minimal page with a full-width photo and a four-up grid" loading="lazy"></a>
+      <div class="body"><h3><small>Design B</small>Studio</h3><p>White, quiet, photo first. For a few products that photograph well: homewares, gifts, craft. An about block, because people buy from a person.</p></div>
+      <a class="open" href="designs/studio/">Open design B</a>
+    </article>
+    <article class="design">
+      <a href="designs/bold/"><img src="media/design-bold.jpg" width="1280" height="800" alt="Design C, Bold: dark page with huge yellow type and a ticker" loading="lazy"></a>
+      <div class="body"><h3><small>Design C</small>Bold</h3><p>Dark, one loud colour, huge type. For drinks, gear, supplements, anything that sells on energy. A ticker carries the delivery promise.</p></div>
+      <a class="open" href="designs/bold/">Open design C</a>
     </article>
   </div>
 </section>
