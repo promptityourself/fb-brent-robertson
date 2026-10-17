@@ -25,7 +25,7 @@ Static assets on a Cloudflare Worker, custom domain in `wrangler.jsonc`:
 
 ```sh
 python3 build/render.py
-npx wrangler deploy
+CLOUDFLARE_ACCOUNT_ID=ef7d622089ca4480c9f6fbf368f66787 npx wrangler deploy   # token: CLOUDFLARE_API_TOKEN in the env
 ```
 
 ## What is and is not claimed
